@@ -1,0 +1,29 @@
+{
+  "data_folder": "data",
+  "calibration_weeks": 52,
+  "calibration_min_rows": 24,
+  "metadata_confirmed": false,
+  "metadata": {
+    "team_name": "DMA PRIME",
+    "team_abbr": "DMA_PRIME",
+    "model_contributors": [
+      {"name": "Gaurob Saha", "affiliation": "Clemson University", "email": "gsaha@clemson.edu"}
+    ],
+    "website_url": null,
+    "license": null,
+    "designated_model": null,
+    "data_inputs": "NHSN CDC weekly influenza admissions and South Carolina MUSC and PRISMA clinical indicators."
+  },
+  "models": {
+    "RF": {
+      "model_name": "DMA PRIME Random Forest",
+      "model_abbr": "RF",
+      "methods": "Direct Random Forest regressors by horizon, lagged clinical indicators, causal ratio adjustment, and empirical historical forecast-error quantiles."
+    },
+    "XGBoost": {
+      "model_name": "DMA PRIME XGBoost",
+      "model_abbr": "XGBoost",
+      "methods": "Direct XGBoost regressors by horizon, lagged clinical indicators, causal ratio adjustment, and empirical historical forecast-error quantiles."
+    }
+  }
+}
